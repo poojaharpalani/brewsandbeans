@@ -1,0 +1,120 @@
+.hero {
+  padding: 36px 16px;
+  background: #fbf6f1; /* warm cafe tone */
+  text-align: center;
+  color: #222;
+}
+
+/* constrain content width for readability */
+.hero__inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 1.9rem;
+  line-height: 1.08;
+  font-weight: 800;
+  color: #1f1f1f;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: #555953;
+  margin: 0 0 20px 0;
+  line-height: 1.45;
+}
+
+/* Actions: stacked full-width buttons on mobile for touch-friendliness */
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base button: large tap area, rounded corners, bold label */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px; /* recommended touch target */
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.06);
+}
+
+/* Primary: strong, high-contrast filled button */
+.btn-call {
+  background: #2b2b2b; /* very dark for strong contrast */
+  color: #ffffff;
+  border-color: #2b2b2b;
+}
+
+/* Secondary: brand/intent button (WhatsApp kept green) */
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #1fa84a;
+}
+
+/* Alternative secondary style (outline) — useful if you prefer a less heavy button
+   Usage: add class `btn-outline` alongside `.btn` */
+.btn-outline {
+  background: transparent;
+  color: #a64b2a;
+  border-color: #a64b2a;
+}
+
+/* Clear focus state for keyboard users */
+.btn:focus {
+  outline: 3px solid rgba(166,75,42,0.18);
+  outline-offset: 3px;
+}
+
+/* Pressed/active state for immediate tactile feedback */
+.btn:active {
+  transform: translateY(0.5px);
+}
+
+/* Wider screens: place actions inline and scale typography */
+@media (min-width: 520px) {
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .btn {
+    min-width: 140px;
+    padding: 12px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 56px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+  }
+}
+
+/* Small visual refinement for high-contrast devices */
+@media (prefers-contrast: more) {
+  .hero-title { color: #000; }
+  .hero-tagline { color: #333; }
+}

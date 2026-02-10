@@ -1,0 +1,97 @@
+:root {
+  --cafe-bg: #fffaf6;
+  --text: #232323;
+  --muted: #6b6b6b;
+  --accent: #a64b2a;
+  --divider: rgba(35, 35, 35, 0.08);
+  --container-max: 1000px;
+}
+
+/* Menu section */
+.menu {
+  background: var(--cafe-bg);
+  padding: 32px 16px;
+  color: var(--text);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* Title */
+.menu-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Category block */
+.menu-category {
+  margin-bottom: 28px;
+}
+
+/* Category heading */
+.category-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* List */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Item row */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Name */
+.item-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Price */
+.item-price {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 72px;
+  text-align: right;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .menu {
+    padding: 40px 24px;
+  }
+
+  .menu-title {
+    font-size: 1.7rem;
+  }
+
+  .menu-item {
+    padding: 14px 6px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .menu {
+    padding: 56px 32px;
+  }
+}
