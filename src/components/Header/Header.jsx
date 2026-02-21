@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -9,21 +10,24 @@ export default function Header() {
         <nav className="header__nav" aria-label="Main navigation">
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
+              <Link to ="/home">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/menu">Menu</a>
+              <Link to="/menu">Menu</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/gallery">Gallery</a>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <Link to="/reservation">Reservation</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/profile">Profile</Link>
             </li>
           </ul>
         </nav>
 
-        <a className="header__cta" href="/order">Order</a>
+        <Link to="/order" className="header__cta">Order</Link>
       </div>
     </header>
   );
